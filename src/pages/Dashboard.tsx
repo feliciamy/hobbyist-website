@@ -9,6 +9,7 @@ import { CreateSubjectDialog } from '@/components/CreateSubjectDialog';
 import { AIAssistant } from '@/components/AIAssistant';
 import { StreakDisplay } from '@/components/StreakDisplay';
 import { ReminderSettings } from '@/components/ReminderSettings';
+import { StudyAnalytics } from '@/components/StudyAnalytics';
 import { 
   BookOpen, 
   Plus, 
@@ -101,7 +102,10 @@ export default function Dashboard() {
             <h2 className="text-3xl font-serif font-bold">
               Welcome back{user?.user_metadata?.full_name ? `, ${user.user_metadata.full_name}` : ''}!
             </h2>
-            <ReminderSettings />
+            <div className="flex items-center gap-2">
+              <StudyAnalytics />
+              <ReminderSettings />
+            </div>
           </div>
           <p className="text-muted-foreground">
             Track your learning progress across all your subjects.
