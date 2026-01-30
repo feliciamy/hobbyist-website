@@ -2,10 +2,13 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/lib/auth';
 import { useSubjects } from '@/hooks/useSubjects';
+import { useStreak } from '@/hooks/useStreak';
 import { Button } from '@/components/ui/button';
 import { SubjectCard } from '@/components/SubjectCard';
 import { CreateSubjectDialog } from '@/components/CreateSubjectDialog';
 import { AIAssistant } from '@/components/AIAssistant';
+import { StreakDisplay } from '@/components/StreakDisplay';
+import { ReminderSettings } from '@/components/ReminderSettings';
 import { 
   BookOpen, 
   Plus, 
@@ -30,6 +33,7 @@ export default function Dashboard() {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
   const { subjects, isLoading, createSubject, updateSubject, deleteSubject } = useSubjects();
+  const { refetch: refetchStreak } = useStreak();
   
   const [createDialogOpen, setCreateDialogOpen] = useState(false);
   const [editingSubject, setEditingSubject] = useState<typeof subjects[0] | null>(null);
@@ -93,12 +97,20 @@ export default function Dashboard() {
       <main className="container mx-auto px-4 py-8">
         {/* Welcome Section */}
         <div className="mb-8 animate-fade-in">
-          <h2 className="text-3xl font-serif font-bold mb-2">
-            Welcome back{user?.user_metadata?.full_name ? `, ${user.user_metadata.full_name}` : ''}!
-          </h2>
+          <div className="flex items-center justify-between mb-2">
+            <h2 className="text-3xl font-serif font-bold">
+              Welcome back{user?.user_metadata?.full_name ? `, ${user.user_metadata.full_name}` : ''}!
+            </h2>
+            <ReminderSettings />
+          </div>
           <p className="text-muted-foreground">
             Track your learning progress across all your subjects.
           </p>
+        </div>
+
+        {/* Streak Display */}
+        <div className="mb-8 animate-slide-up">
+          <StreakDisplay />
         </div>
 
         {/* Stats */}
