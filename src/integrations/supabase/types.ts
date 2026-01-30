@@ -112,24 +112,63 @@ export type Database = {
         Row: {
           avatar_url: string | null
           created_at: string
+          current_streak: number
           full_name: string | null
           id: string
+          last_study_date: string | null
+          longest_streak: number
           updated_at: string
           user_id: string
         }
         Insert: {
           avatar_url?: string | null
           created_at?: string
+          current_streak?: number
           full_name?: string | null
           id?: string
+          last_study_date?: string | null
+          longest_streak?: number
           updated_at?: string
           user_id: string
         }
         Update: {
           avatar_url?: string | null
           created_at?: string
+          current_streak?: number
           full_name?: string | null
           id?: string
+          last_study_date?: string | null
+          longest_streak?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      study_reminders: {
+        Row: {
+          created_at: string
+          days_of_week: number[]
+          id: string
+          is_enabled: boolean
+          reminder_time: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          days_of_week?: number[]
+          id?: string
+          is_enabled?: boolean
+          reminder_time?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          days_of_week?: number[]
+          id?: string
+          is_enabled?: boolean
+          reminder_time?: string
           updated_at?: string
           user_id?: string
         }
