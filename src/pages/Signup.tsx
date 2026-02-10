@@ -26,7 +26,7 @@ export default function Signup() {
       toast.error(error.message);
       setLoading(false);
     } else {
-      toast.success('Account created! Welcome to Hobbyist!');
+      toast.success('Account created! Welcome to Hobbyiist!');
       navigate('/dashboard');
     }
   };
@@ -39,7 +39,7 @@ export default function Signup() {
             <div className="p-2 rounded-xl hero-gradient">
               <BookOpen className="h-8 w-8 text-primary-foreground" />
             </div>
-            <h1 className="text-3xl font-serif font-bold">Hobbyist</h1>
+            <h1 className="text-3xl font-serif font-bold">Hobbyiist</h1>
           </div>
         </div>
 
