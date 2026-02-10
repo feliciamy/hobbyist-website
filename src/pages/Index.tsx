@@ -32,7 +32,7 @@ export default function Index() {
             <div className="p-2 rounded-xl hero-gradient">
               <BookOpen className="h-6 w-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-serif font-bold">LearnFlow</span>
+            <span className="text-xl font-serif font-bold">Hobbyiist</span>
           </div>
           <div className="flex items-center gap-3">
             <Link to="/login">
@@ -126,7 +126,7 @@ export default function Index() {
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <BookOpen className="h-4 w-4" />
-            <span>LearnFlow</span>
+            <span>Hobbyiist</span>
           </div>
           <p>Your personal learning companion</p>
         </div>
