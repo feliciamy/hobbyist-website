@@ -84,7 +84,7 @@ export default function Dashboard() {
               <div className="p-2 rounded-xl hero-gradient">
                 <BookOpen className="h-6 w-6 text-primary-foreground" />
               </div>
-              <h1 className="text-2xl font-serif font-bold">LearnFlow</h1>
+              <h1 className="text-2xl font-serif font-bold">Hobbyiist</h1>
             </div>
             <Button variant="ghost" onClick={handleLogout}>
               <LogOut className="h-4 w-4 mr-2" />

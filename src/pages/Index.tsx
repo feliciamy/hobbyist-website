@@ -126,7 +126,7 @@ export default function Index() {
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <BookOpen className="h-4 w-4" />
-            <span>LearnFlow</span>
+            <span>Hobbyiist</span>
           </div>
           <p>Your personal learning companion</p>
         </div>
