@@ -37,7 +37,7 @@ export default function ForgotPassword() {
             <div className="p-2 rounded-xl hero-gradient">
               <BookOpen className="h-8 w-8 text-primary-foreground" />
             </div>
-            <h1 className="text-3xl font-serif font-bold">LearnFlow</h1>
+            <h1 className="text-3xl font-serif font-bold">Hobbyist</h1>
           </div>
         </div>
 

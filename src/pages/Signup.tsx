@@ -26,7 +26,7 @@ export default function Signup() {
       toast.error(error.message);
       setLoading(false);
     } else {
-      toast.success('Account created! Welcome to LearnFlow!');
+      toast.success('Account created! Welcome to Hobbyist!');
       navigate('/dashboard');
     }
   };
