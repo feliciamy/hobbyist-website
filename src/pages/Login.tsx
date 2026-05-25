@@ -65,7 +65,7 @@ export default function Login() {
                 <Input
                   id="password"
                   type="password"
-                  placeholder="••••••••"
+                  placeholder="----"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -82,7 +82,7 @@ export default function Login() {
                 {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Sign In'}
               </Button>
               <p className="text-sm text-muted-foreground text-center">
-                Don't have an account?{' '}
+                Do not have an account yet?{' '}
                 <Link to="/signup" className="text-primary hover:underline font-medium">
                   Sign up
                 </Link>
