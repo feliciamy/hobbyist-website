@@ -26,7 +26,7 @@ export default function Signup() {
       toast.error(error.message);
       setLoading(false);
     } else {
-      toast.success('Account created! Welcome to Hobbyiist!');
+      toast.success('Account successfully created! Welcome to Hobbyiist!');
       navigate('/dashboard');
     }
   };
@@ -45,7 +45,7 @@ export default function Signup() {
 
         <Card className="glass-card">
           <CardHeader className="text-center">
-            <CardTitle className="text-2xl font-serif">Start your journey</CardTitle>
+            <CardTitle className="text-2xl font-serif">Start your Learning journey</CardTitle>
             <CardDescription>Create an account to track your learning</CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
@@ -86,7 +86,7 @@ export default function Signup() {
             </CardContent>
             <CardFooter className="flex flex-col gap-4">
               <Button type="submit" variant="hero" className="w-full" size="lg" disabled={loading}>
-                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Create Account'}
+                {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : 'Create Account Here'}
               </Button>
               <p className="text-sm text-muted-foreground text-center">
                 Already have an account?{' '}
