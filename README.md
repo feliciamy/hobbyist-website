@@ -20,3 +20,8 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+
+<h2> For collaboration</h2>
+
+-send email below
+
